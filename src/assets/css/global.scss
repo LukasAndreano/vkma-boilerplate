@@ -1,0 +1,29 @@
+@import "@vkontakte/vkui/dist/vkui.css", "variables.scss";
+
+body,
+.Header {
+  user-select: none;
+}
+
+.vkuiTabbarItem {
+  .vkuiTappable {
+    display: none;
+  }
+}
+
+.vkuiPanelHeader__content-in,
+.vkuiModalPageHeader__content-in {
+  font-weight: 400 !important;
+}
+
+.SimpleCell {
+  border-radius: 8px;
+}
+
+.navigation__item-selected {
+  background-color: var(--vkui--color_background--hover);
+}
+
+.panelPadding {
+  margin: 5px 10px;
+}
