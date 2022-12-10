@@ -1,9 +1,8 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import { ModalRoot } from "@vkontakte/vkui";
 import ModalCardConstructor from "/src/components/__global/ModalCardConstructor";
 import { Icon56Fire } from "@vkontakte/icons";
-
-const Hello = lazy(() => import("/src/components/__modals/Hello"));
+import Hello from "./Hello";
 
 const MainStack = ({ modal, toBack }) => {
   return (
@@ -14,9 +13,7 @@ const MainStack = ({ modal, toBack }) => {
         id={"hello"}
         icon={<Icon56Fire />}
       >
-        <Suspense fallback={""}>
-          <Hello />
-        </Suspense>
+        <Hello />
       </ModalCardConstructor>
     </ModalRoot>
   );

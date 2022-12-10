@@ -9,6 +9,7 @@ export const getIsDesktop = selector({
 export const getSnackbar = selector({
   key: "getSnackbar",
   get: ({ get }) => get(_).snackbar,
+  set: ({ set }, value) => set(_, (state) => ({ ...state, snackbar: value })), // setter example
 });
 
 export const getPlatform = selector({

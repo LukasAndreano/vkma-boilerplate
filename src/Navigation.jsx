@@ -10,14 +10,10 @@ import {
 
 import useRouterHooks from "/src/hooks/useRouterHooks";
 import PageConstructor from "/src/components/__global/PageConstructor";
-
-const DesktopNavigation = lazy(() =>
-  import("./components/__navigation/Desktop")
-);
-const MobileNavigation = lazy(() => import("./components/__navigation/Mobile"));
-
-const Home = lazy(() => import("/src/components/home/base"));
-const Profile = lazy(() => import("/src/components/profile/base"));
+import Home from "./components/home/base";
+import Profile from "./components/profile/base";
+import MobileNavigation from "./components/__navigation/Mobile";
+import DesktopNavigation from "./components/__navigation/Desktop";
 
 const MainStack = lazy(() => import("./components/__modals/MainStack"));
 
@@ -27,7 +23,7 @@ const Navigation = ({ router, isDesktop }) => {
   return (
     <SplitLayout
       header={<PanelHeader separator={false} />}
-      style={{ justifyContent: "center" }}
+      className={"jcc"}
       modal={
         <Suspense fallback={""}>
           <MainStack modal={router.modal} toBack={routerHooks.toBack} />
@@ -36,12 +32,10 @@ const Navigation = ({ router, isDesktop }) => {
       popout={router.popout}
     >
       {isDesktop ? (
-        <Suspense fallback={""}>
-          <DesktopNavigation
-            activeView={router.activeView}
-            openPage={routerHooks.openPage}
-          />
-        </Suspense>
+        <DesktopNavigation
+          activeView={router.activeView}
+          openPage={routerHooks.openPage}
+        />
       ) : null}
 
       <SplitCol
@@ -54,12 +48,10 @@ const Navigation = ({ router, isDesktop }) => {
           activeStory={router.activeView}
           tabbar={
             !isDesktop ? (
-              <Suspense fallback={""}>
-                <MobileNavigation
-                  activeView={router.activeView}
-                  openPage={routerHooks.openPage}
-                />
-              </Suspense>
+              <MobileNavigation
+                activeView={router.activeView}
+                openPage={routerHooks.openPage}
+              />
             ) : null
           }
         >

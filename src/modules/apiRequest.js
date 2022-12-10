@@ -1,4 +1,4 @@
-export default async function api(endpoint, method, params, isUpload) {
+const api = async (endpoint, method, params, isUpload) => {
   const headers = {
     authorization: `Bearer ${
       window.location.href
@@ -9,11 +9,13 @@ export default async function api(endpoint, method, params, isUpload) {
 
   if (!isUpload) headers["Content-Type"] = "application/json";
 
-  const data = await fetch(`https://api.domain.ru/v1/${endpoint}`, {
+  const data = await fetch(`https://api.domain.ru/${endpoint}`, {
     method: method,
     headers: headers,
     body: !isUpload ? JSON.stringify(params) : params,
   });
 
   return await data.json();
-}
+};
+
+export default api;

@@ -25,14 +25,14 @@ const App = withAdaptivity(
     useEffect(() => {
       bridge.subscribe(({ detail: { type, data } }) => {
         if (type === "VKWebAppUpdateConfig") {
-          setTheme(data.scheme.includes("light") ? "light" : "dark");
+          setTheme(data?.scheme.includes("light") ? "light" : "dark");
           themeController.setTheme(data.scheme);
         }
       });
     }, []);
 
     useEffect(() => {
-      bridge.send("VKWebAppInit");
+      bridge.send("VKWebAppInit").then(() => console.log("VKWebAppInit"));
 
       updateMainCoil({
         ...mainCoil,
@@ -45,9 +45,10 @@ const App = withAdaptivity(
       <ConfigProvider
         locale={"ru"}
         isWebView
+        appearance={theme ?? "light"}
         platform={isDesktop ? "android" : platform}
       >
-        <AppearanceProvider appearance={theme}>
+        <AppearanceProvider appearance={theme ?? "light"}>
           <AppRoot mode="full">
             <SnackbarProvider>
               <Navigation isDesktop={isDesktop} />
