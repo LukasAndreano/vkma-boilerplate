@@ -12,7 +12,7 @@ dist
 dist-ssr
 odr-dist
 *.local
-
+build.zip
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
