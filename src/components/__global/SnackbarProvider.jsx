@@ -10,7 +10,7 @@ export default function SnackbarProvider({ children }) {
     <>
       {children}
       {snackbar !== "" && (
-        <Snackbar onClose={() => setSnackbar("")} duration={2000}>
+        <Snackbar onClose={() => setSnackbar("")} duration={3000}>
           {snackbar}
         </Snackbar>
       )}

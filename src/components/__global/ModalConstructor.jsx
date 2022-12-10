@@ -10,7 +10,7 @@ import {
 } from "@vkontakte/vkui";
 import { Icon24Dismiss } from "@vkontakte/icons";
 import { getIsDesktop, getPlatform } from "/src/storage/selectors/main";
-import { useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 
 const ModalConstructor = ({
   id,
@@ -20,8 +20,8 @@ const ModalConstructor = ({
   className = "",
   dynamicContentHeight = false,
 }) => {
-  const isDesktop = useRecoilState(getIsDesktop);
-  const platform = useRecoilState(getPlatform);
+  const isDesktop = useRecoilValue(getIsDesktop);
+  const platform = useRecoilValue(getPlatform);
 
   return (
     <ModalPage

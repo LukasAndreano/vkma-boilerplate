@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { Group, Panel, PanelHeader, PanelHeaderBack } from "@vkontakte/vkui";
 import { getIsDesktop } from "/src/storage/selectors/main";
-import { useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 
 const Page = ({
   children,
@@ -12,7 +12,7 @@ const Page = ({
   disableSpace = false,
   name = "",
 }) => {
-  const [isDesktop] = useRecoilState(getIsDesktop);
+  const isDesktop = useRecoilValue(getIsDesktop);
 
   return (
     <Panel
