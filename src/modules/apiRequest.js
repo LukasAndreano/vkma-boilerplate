@@ -9,7 +9,7 @@ const api = async (endpoint, method, params, isUpload) => {
 
   if (!isUpload) headers["Content-Type"] = "application/json";
 
-  const data = await fetch(`https://api.domain.ru/${endpoint}`, {
+  const data = await fetch(`${import.meta.env.VITE_BACKEND_URL}/${endpoint}`, {
     method: method,
     headers: headers,
     body: !isUpload ? JSON.stringify(params) : params,
