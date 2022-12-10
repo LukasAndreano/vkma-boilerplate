@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import main from "/src/storage/reducers/main";
+import main from "/src/storage/atoms/main";
 
 export default function useSnackbar() {
   const [, setSnackbar] = useRecoilState(main);

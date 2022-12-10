@@ -8,7 +8,7 @@ import {
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 
-import main from "/src/storage/reducers/main";
+import main from "/src/storage/atoms/main";
 import bridge from "@vkontakte/vk-bridge";
 import SnackbarProvider from "/src/components/__global/SnackbarProvider";
 import Navigation from "/src/Navigation";
