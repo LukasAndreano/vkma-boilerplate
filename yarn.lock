@@ -375,10 +375,10 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.6.tgz#cee20bd55e68a1720bdab363ecf0c821ded4cd45"
   integrity sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==
 
-"@reyzitwo/react-router-vkminiapps@^1.4.7":
-  version "1.4.7"
-  resolved "https://registry.yarnpkg.com/@reyzitwo/react-router-vkminiapps/-/react-router-vkminiapps-1.4.7.tgz#d57ab2c69c2243e7ad897d8aa281fc5fb7b9afd2"
-  integrity sha512-u1fbSzuMfj1t8xOeVTtoAU+yYOgFo2fp6Se4sxwLg14cyRKXkpVnvInfx/nE+8Zd5uWl1ErTf05i7YUAKDFwFw==
+"@reyzitwo/react-router-vkminiapps@^1.4.8":
+  version "1.4.8"
+  resolved "https://registry.yarnpkg.com/@reyzitwo/react-router-vkminiapps/-/react-router-vkminiapps-1.4.8.tgz#3ae135222946e6e439a2f1a1010ea3305336b86e"
+  integrity sha512-lVW2QyUedcmL0o+kAMIQx9Br2HMOlQ6SMNiUQtz8n7YvB2i1aRr8aXTzt30sIkePj99t9oQV44Zkx1zrudL7VA==
   dependencies:
     react-redux "^7.2.4"
 

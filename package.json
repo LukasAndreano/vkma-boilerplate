@@ -14,7 +14,7 @@
     "kokateam-deploy": "yarn build && kokateam-deploy"
   },
   "dependencies": {
-    "@reyzitwo/react-router-vkminiapps": "^1.4.7",
+    "@reyzitwo/react-router-vkminiapps": "^1.4.8",
     "@vkontakte/icons": "^2.1.1",
     "@vkontakte/vk-bridge": "^2.7.2",
     "@vkontakte/vkui": "^4.40.0",
