@@ -20,7 +20,10 @@ const App = withAdaptivity(
 
     const platform = usePlatform();
 
-    const isDesktop = viewWidth >= 3;
+    const isDesktop =
+      viewWidth > 3 ||
+      new URLSearchParams(window.location.search).get("vk_platform") ===
+      "desktop_web";
 
     useEffect(() => {
       bridge.subscribe(({ detail: { type, data } }) => {
