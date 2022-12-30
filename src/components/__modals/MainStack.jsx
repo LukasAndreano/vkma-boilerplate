@@ -3,6 +3,7 @@ import { ModalRoot } from "@vkontakte/vkui";
 import ModalCardConstructor from "/src/components/__global/ModalCardConstructor";
 import { Icon56Fire } from "@vkontakte/icons";
 import Hello from "./Hello";
+import ModalConstructor from "../__global/ModalConstructor";
 
 const MainStack = ({ modal, toBack }) => {
   return (
@@ -15,6 +16,14 @@ const MainStack = ({ modal, toBack }) => {
       >
         <Hello />
       </ModalCardConstructor>
+
+      <ModalConstructor
+        id={"fullModal"}
+        title={"Фулл модал"}
+        close={toBack}
+      >
+        Body
+      </ModalConstructor>
     </ModalRoot>
   );
 };
