@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@reyzitwo/react-router-vkminiapps": "^1.4.8",
-    "@vkontakte/icons": "^1.211.0",
+    "@vkontakte/icons": "^2.4.0",
     "@vkontakte/vk-bridge": "^2.7.2",
     "@vkontakte/vkui": "^4.40.0",
     "react": "^17.0.2",

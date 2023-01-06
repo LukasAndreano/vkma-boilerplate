@@ -272,10 +272,10 @@
   dependencies:
     "@swc/core" "^1.3.22"
 
-"@vkontakte/icons@^1.211.0":
-  version "1.211.0"
-  resolved "https://registry.yarnpkg.com/@vkontakte/icons/-/icons-1.211.0.tgz#94cd334f7ea78c2523cb6f841950ff23ed0ffcd0"
-  integrity sha512-IRdY0l+r4DNvY3pGRgQwbSivdgEIfJ6/8iH53vlZ0m7W5BAP5ngVqagYutRvqX4YEyEjnrcVHWOvT12/Dz5bUg==
+"@vkontakte/icons@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@vkontakte/icons/-/icons-2.4.0.tgz#85abacea8a14cf442882cd408873384a3b2684a8"
+  integrity sha512-XGzZQ7qLpXeEglEQvpN7sfRkVNBmknFJgmBsu5l8DVUeL7dxChsy2ijJy0vpplFoKDormJiW9AoMjSk3a1FQNA==
   dependencies:
     svg-baker-runtime "1.4.7"
 
