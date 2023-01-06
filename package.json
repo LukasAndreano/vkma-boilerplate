@@ -7,7 +7,7 @@
     "dev": "vite --port=3000",
     "build": "yarn prettier && vite build --base=./",
     "preview": "vite preview",
-    "odr": "env ODR=1 yarn build && tar -cvzf odr.zip -C ./odr-dist/ .",
+    "odr": "env ODR=1 yarn build",
     "prettier": "npx prettier --write .",
     "tunnel": "vk-tunnel --insecure=1 --http-protocol=http --ws-protocol=wss --host=localhost --port=3000",
     "deploy": "yarn build && vk-miniapps-deploy"
