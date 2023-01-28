@@ -10,7 +10,7 @@ const Home = ({ toModal, toPanel }) => {
       <Button stretched onClick={() => toModal("hello")}>
         Открыть модалку!
       </Button>
-      <Button stretched onClick={() => toModal("fullModal")} className={'mt5'}>
+      <Button stretched onClick={() => toModal("fullModal")} className={"mt5"}>
         Открыть модалку полную!
       </Button>
       <Button className={"mt5"} stretched onClick={() => toPanel("home2")}>

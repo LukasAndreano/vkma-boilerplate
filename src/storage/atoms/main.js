@@ -5,7 +5,6 @@ const _ = atom({
   default: {
     isDesktop: false,
     platform: "",
-    snackbar: "",
   },
 });
 

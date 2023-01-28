@@ -1,19 +1,22 @@
-import { getSnackbar } from "../../storage/selectors/main";
 import React from "react";
-import { Snackbar } from "@vkontakte/vkui";
-import { useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
+import { Toaster } from "react-hot-toast";
 
 export default function SnackbarProvider({ children }) {
-  const [snackbar, setSnackbar] = useRecoilState(getSnackbar);
+  const isDesktop = useRecoilValue(getIsDesktop);
 
   return (
     <>
       {children}
-      {snackbar !== "" && (
-        <Snackbar onClose={() => setSnackbar("")} duration={3000}>
-          {snackbar}
-        </Snackbar>
-      )}
+
+      <Toaster
+        toastOptions={{
+          className: "toast",
+        }}
+        gutter={isDesktop ? 8 : -20}
+        position={isDesktop ? "bottom-left" : "top-center"}
+        reverseOrder={false}
+      />
     </>
   );
 }

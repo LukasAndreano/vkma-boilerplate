@@ -5,6 +5,19 @@ body,
   user-select: none;
 }
 
+body[scheme="bright_dark"],
+[scheme="bright_dark"],
+.vkuibright_dark,
+body[scheme="vkcom_dark"],
+[scheme="vkcom_dark"],
+.vkuivkcom_dark,
+.dark {
+  .toast {
+    background: #232324;
+    color: #fff;
+  }
+}
+
 .vkuiTabbarItem {
   .vkuiTappable {
     display: none;

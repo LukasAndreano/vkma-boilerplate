@@ -17,11 +17,7 @@ const MainStack = ({ modal, toBack }) => {
         <Hello />
       </ModalCardConstructor>
 
-      <ModalConstructor
-        id={"fullModal"}
-        title={"Фулл модал"}
-        close={toBack}
-      >
+      <ModalConstructor id={"fullModal"} title={"Фулл модал"} close={toBack}>
         Body
       </ModalConstructor>
     </ModalRoot>
