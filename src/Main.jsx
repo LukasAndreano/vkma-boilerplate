@@ -12,13 +12,13 @@ import App from "/src/App";
 import api from "./modules/apiRequest";
 
 const app = async () => {
-    const initializeReq = await api("initialize", `GET`);
+    // const initializeReq = await api("initialize", `GET`);
 
     ReactDOM.render(
         <RecoilRoot>
             <AdaptivityProvider>
                 <Router structure={structure}>
-                    <App initialize={initializeReq} />
+                    <App />
                 </Router>
             </AdaptivityProvider>
         </RecoilRoot>,

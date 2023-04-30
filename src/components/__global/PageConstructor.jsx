@@ -9,7 +9,6 @@ const Page = ({
   className = "",
   centered = false,
   toBack = false,
-  disableSpace = false,
   name = "",
 }) => {
   const isDesktop = useRecoilValue(getIsDesktop);
@@ -28,7 +27,7 @@ const Page = ({
       >
         {name}
       </PanelHeader>
-      <Group className={disableSpace ? "" : "p5"}>
+      <Group className={isDesktop ? "" : "p5"}>
         <Suspense fallback={""}>{children}</Suspense>
       </Group>
     </Panel>

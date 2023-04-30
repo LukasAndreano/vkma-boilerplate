@@ -3,6 +3,7 @@ import { withRouter } from "@reyzitwo/react-router-vkminiapps";
 import { View } from "@vkontakte/vkui";
 import useRouterHooks from "../../hooks/useRouterHooks";
 
+// Custom view is required for swipeback on uIS
 const CustomView = ({ id, children, router }) => {
   const routerHooks = useRouterHooks({ router });
 
