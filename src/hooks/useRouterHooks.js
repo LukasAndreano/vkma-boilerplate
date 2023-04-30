@@ -1,9 +1,6 @@
 import { useCallback } from "react";
-import useSnackbar from "/src/hooks/useSnackbar";
 
 export default function useRouterHooks({ router }) {
-  const toSnackbar = useSnackbar();
-
   const toPanel = useCallback(
     (panel) => {
       router.toPanel(panel);
@@ -37,6 +34,5 @@ export default function useRouterHooks({ router }) {
     openPage,
     toBack,
     toModal,
-    toSnackbar,
   };
 }

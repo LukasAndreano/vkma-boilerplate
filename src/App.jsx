@@ -12,16 +12,11 @@ import main from "/src/storage/atoms/main";
 import bridge from "@vkontakte/vk-bridge";
 import SnackbarProvider from "/src/components/__global/SnackbarProvider";
 import Navigation from "/src/Navigation";
-import api from "./modules/apiRequest";
 
 const App = withAdaptivity(
-  ({ viewWidth, themeController }) => {
+  ({ viewWidth }) => {
     const [theme, setTheme] = useState("light");
     const [mainCoil, updateMainCoil] = useRecoilState(main);
-
-    useEffect(() => {
-      api("initialize", `GET`);
-    }, []);
 
     const platform = usePlatform();
 
@@ -32,10 +27,8 @@ const App = withAdaptivity(
 
     useEffect(() => {
       bridge.subscribe(({ detail: { type, data } }) => {
-        if (type === "VKWebAppUpdateConfig") {
+        if (type === "VKWebAppUpdateConfig")
           setTheme(data?.scheme.includes("light") ? "light" : "dark");
-          themeController.setTheme(data.scheme);
-        }
       });
     }, []);
 
@@ -57,7 +50,7 @@ const App = withAdaptivity(
         platform={isDesktop ? "android" : platform}
       >
         <AppearanceProvider appearance={theme || "light"}>
-          <AppRoot mode="full">
+          <AppRoot mode="full" className={isDesktop ? "desktop" : "mobile"}>
             <SnackbarProvider>
               <Navigation isDesktop={isDesktop} />
             </SnackbarProvider>
