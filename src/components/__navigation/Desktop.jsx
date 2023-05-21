@@ -1,8 +1,11 @@
-import React from "react";
+import { useRouterView } from "@kokateam/router-vkminiapps";
+
 import { Panel, PanelHeader, SimpleCell, SplitCol } from "@vkontakte/vkui";
 import navigationItems from "/src/components/__navigation/items";
 
-const DesktopNavigation = ({ activeView, openPage }) => {
+const DesktopNavigation = () => {
+  const { view, toView } = useRouterView();
+
   return (
     <SplitCol fixed width="240px" maxWidth="240px">
       <Panel nav="navigationDesktop">
@@ -12,10 +15,10 @@ const DesktopNavigation = ({ activeView, openPage }) => {
           <SimpleCell
             key={key}
             className={`mb5 ${
-              activeView === el.id ? "navigation__item-selected" : ""
+              view === el.id ? "navigation__item-selected" : ""
             }`}
-            onClick={() => openPage(el.id, el.id)}
-            disabled={activeView === el.id}
+            onClick={() => toView(el.id)}
+            disabled={view === el.id}
             before={el.icon}
             multiline
             description={el.description}

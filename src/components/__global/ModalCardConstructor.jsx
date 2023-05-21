@@ -1,4 +1,3 @@
-import React from "react";
 import { ModalCard } from "@vkontakte/vkui";
 
 const ModalCardConstructor = ({

@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import { useRecoilState } from "recoil";
+
 import {
   AppearanceProvider,
   AppRoot,
@@ -5,13 +8,12 @@ import {
   usePlatform,
   withAdaptivity,
 } from "@vkontakte/vkui";
-import { useEffect, useState } from "react";
-import { useRecoilState } from "recoil";
 
-import main from "/src/storage/atoms/main";
-import bridge from "@vkontakte/vk-bridge";
-import SnackbarProvider from "/src/components/__global/SnackbarProvider";
+import { SnackbarProvider } from "/src/components/__global";
 import Navigation from "/src/Navigation";
+
+import bridge from "@vkontakte/vk-bridge";
+import main from "/src/storage/atoms/main";
 
 const App = withAdaptivity(
   ({ viewWidth }) => {

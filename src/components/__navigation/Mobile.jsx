@@ -1,15 +1,18 @@
-import React from "react";
+import { useRouterView } from "@kokateam/router-vkminiapps";
+
 import { Tabbar, TabbarItem } from "@vkontakte/vkui";
 import navigationItems from "/src/components/__navigation/items";
 
-const MobileNavigation = ({ activeView, openPage }) => {
+const MobileNavigation = () => {
+  const { view, toView } = useRouterView();
+
   return (
     <Tabbar>
       {navigationItems.map((el, key) => (
         <TabbarItem
-          onClick={() => openPage(el.id, el.id)}
+          onClick={() => toView(el.id)}
           key={key}
-          selected={activeView === el.id}
+          selected={view === el.id}
           text={el.title}
         >
           {el.icon}

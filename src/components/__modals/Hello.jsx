@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Text } from "@vkontakte/vkui";
 
 const Hello = () => {
