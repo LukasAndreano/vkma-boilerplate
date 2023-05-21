@@ -1,27 +1,36 @@
 import React from "react";
-import {Button, Title} from "@vkontakte/vkui";
+import { useRouterModal, useRouterPanel } from "@kokateam/router-vkminiapps";
+
+import { Button, Title } from "@vkontakte/vkui";
 import toast from "react-hot-toast";
 
-const Home = ({toModal, toPanel}) => {
-    return (
-        <>
-            <Title weight={"3"} className={"mb10 centered"}>
-                Привет, это boilerplate!
-            </Title>
-            <Button stretched onClick={() => toModal("hello")}>
-                Открыть модалку!
-            </Button>
-            <Button stretched onClick={() => toast.success("Да, это тост")} className={"mt5"}>
-                Toast!
-            </Button>
-            <Button stretched onClick={() => toModal("fullModal")} className={"mt5"}>
-                Открыть модалку полную!
-            </Button>
-            <Button className={"mt5"} stretched onClick={() => toPanel("home2")}>
-                Открыть панель!
-            </Button>
-        </>
-    );
+const Home = () => {
+  const { toModal } = useRouterModal();
+  const { toPanel } = useRouterPanel();
+
+  return (
+    <>
+      <Title weight={"3"} className={"mb10 centered"}>
+        Привет, это boilerplate!
+      </Title>
+      <Button stretched onClick={() => toModal("hello")}>
+        Открыть модалку!
+      </Button>
+      <Button
+        stretched
+        onClick={() => toast.success("Да, это тост")}
+        className={"mt5"}
+      >
+        Toast!
+      </Button>
+      <Button stretched onClick={() => toModal("fullModal")} className={"mt5"}>
+        Открыть модалку полную!
+      </Button>
+      <Button className={"mt5"} stretched onClick={() => toPanel("home2")}>
+        Открыть панель!
+      </Button>
+    </>
+  );
 };
 
 export default Home;
