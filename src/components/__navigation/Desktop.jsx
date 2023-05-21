@@ -1,4 +1,3 @@
-import React from "react";
 import { useRouterView } from "@kokateam/router-vkminiapps";
 
 import { Panel, PanelHeader, SimpleCell, SplitCol } from "@vkontakte/vkui";

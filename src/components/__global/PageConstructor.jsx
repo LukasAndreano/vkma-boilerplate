@@ -1,9 +1,9 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
+import { useRecoilValue } from "recoil";
 import { useRouterBack } from "@kokateam/router-vkminiapps";
 
 import { Group, Panel, PanelHeader, PanelHeaderBack } from "@vkontakte/vkui";
 import { getIsDesktop } from "/src/storage/selectors/main";
-import { useRecoilValue } from "recoil";
 
 const Page = ({
   children,

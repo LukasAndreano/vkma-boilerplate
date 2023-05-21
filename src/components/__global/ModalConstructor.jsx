@@ -1,4 +1,5 @@
-import React from "react";
+import { useRecoilValue } from "recoil";
+
 import {
   ANDROID,
   Group,
@@ -9,8 +10,8 @@ import {
   PanelHeaderClose,
 } from "@vkontakte/vkui";
 import { Icon24Dismiss } from "@vkontakte/icons";
+
 import { getIsDesktop, getPlatform } from "/src/storage/selectors/main";
-import { useRecoilValue } from "recoil";
 
 const ModalConstructor = ({
   id,

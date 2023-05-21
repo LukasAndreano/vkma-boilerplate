@@ -1,4 +1,3 @@
-import React from "react";
 import { useRouterModal, useRouterPanel } from "@kokateam/router-vkminiapps";
 
 import { Button, Title } from "@vkontakte/vkui";

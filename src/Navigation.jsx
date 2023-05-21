@@ -1,12 +1,11 @@
-import React from "react";
 import { PanelHeader, SplitCol, SplitLayout } from "@vkontakte/vkui";
 import { Epic, View, useRouterPopout } from "@kokateam/router-vkminiapps";
 
-import PageConstructor from "/src/components/__global/PageConstructor";
+import { PageConstructor } from "/src/components/__global";
+import { DesktopNavigation, MobileNavigation } from "./components/__navigation";
+
 import Home from "./components/home/base";
 import Profile from "./components/profile/base";
-import MobileNavigation from "./components/__navigation/Mobile";
-import DesktopNavigation from "./components/__navigation/Desktop";
 import MainStack from "./components/__modals/MainStack";
 
 const Navigation = ({ isDesktop }) => {

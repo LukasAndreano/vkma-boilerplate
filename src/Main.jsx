@@ -1,18 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
 
 import { AdaptivityProvider } from "@vkontakte/vkui";
 import { RouterRoot } from "@kokateam/router-vkminiapps";
 
-import "/src/assets/css/global.scss";
-
 import App from "/src/App";
 import api from "./modules/apiRequest";
+
+import "/src/assets/css/global.scss";
 
 const app = async () => {
   // const initializeReq = await api("initialize", `GET`);
 
-  ReactDOM.render(
+  render(
     <RouterRoot>
       <AdaptivityProvider>
         <App />
