@@ -8,7 +8,7 @@
 
 - [React](https://reactjs.org/)
 - [Recoil](https://recoiljs.org/)
-- [VKMA Router](https://github.com/reyzitwo/react-router-vkminiapps)
+- [VKMA Router](https://github.com/kokateam/router-vkminiapps)
 
 ### ⚙️ Начало работы
 
