@@ -1,6 +1,7 @@
+// @ts-nocheck
 import * as eruda from "eruda";
-const erudaCode = require("eruda-code");
-const erudaDom = require("eruda-dom");
+import * as erudaCode from "eruda-code";
+import * as erudaDom from "eruda-dom";
 
 (eruda as any).init();
 (eruda as any).add(erudaCode);
