@@ -9,39 +9,41 @@ import {
   withAdaptivity,
 } from "@vkontakte/vkui";
 
-import { SnackbarProvider } from "/src/components/__global";
-import Navigation from "/src/Navigation";
+import { SnackbarProvider } from "./components/__global";
+import Navigation from "./Navigation";
 
 import bridge from "@vkontakte/vk-bridge";
-import main from "/src/storage/atoms/main";
+import main from "./storage/atoms/main";
 
 const App = withAdaptivity(
   ({ viewWidth }) => {
-    const [theme, setTheme] = useState("light");
-    const [mainCoil, updateMainCoil] = useRecoilState(main);
+    const [theme, setTheme] = useState<"light" | "dark">("light");
+    const [, updateMainCoil] = useRecoilState(main);
 
     const platform = usePlatform();
 
     const isDesktop =
-      viewWidth > 3 ||
+      (viewWidth && viewWidth > 3) ||
       new URLSearchParams(window.location.search).get("vk_platform") ===
         "desktop_web";
 
     useEffect(() => {
       bridge.subscribe(({ detail: { type, data } }) => {
-        if (type === "VKWebAppUpdateConfig")
+        if (type === "VKWebAppUpdateConfig") {
+          // @ts-ignore
           setTheme(data?.scheme.includes("light") ? "light" : "dark");
+        }
       });
     }, []);
 
     useEffect(() => {
       bridge.send("VKWebAppInit").then(() => console.log("VKWebAppInit"));
 
-      updateMainCoil({
-        ...mainCoil,
+      updateMainCoil((prev) => ({
+        ...prev,
         isDesktop,
         platform,
-      });
+      }));
     }, []);
 
     return (

@@ -1,9 +1,15 @@
+import { ReactNode } from "react";
+
 import { useRecoilValue } from "recoil";
 import { Toaster } from "react-hot-toast";
 
-import { getIsDesktop } from "../../storage/selectors/main";
+import { getIsDesktop } from "src/storage/selectors/main";
 
-export default function SnackbarProvider({ children }) {
+interface SnackbarProviderI {
+  children: ReactNode;
+}
+
+export default function SnackbarProvider({ children }: SnackbarProviderI) {
   const isDesktop = useRecoilValue(getIsDesktop);
 
   return (

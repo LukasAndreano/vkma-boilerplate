@@ -1,14 +1,26 @@
+import { ReactNode } from "react";
+
 import { ModalCard } from "@vkontakte/vkui";
+
+interface ModalCardConstructorI {
+  id: string;
+  close(): void;
+  title?: string;
+  icon?: ReactNode;
+  className?: string;
+  actions?: ReactNode;
+  children: ReactNode;
+}
 
 const ModalCardConstructor = ({
   id,
   close,
   title = "",
   icon = "",
-  children,
-  className = "",
   actions,
-}) => {
+  className = "",
+  children,
+}: ModalCardConstructorI) => {
   return (
     <ModalCard
       className={className}

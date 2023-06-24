@@ -5,7 +5,7 @@ import { Icon56Fire } from "@vkontakte/icons";
 import {
   ModalCardConstructor,
   ModalConstructor,
-} from "/src/components/__global";
+} from "src/components/__global";
 
 import Hello from "./Hello";
 

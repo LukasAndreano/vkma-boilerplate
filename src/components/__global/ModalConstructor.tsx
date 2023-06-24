@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { useRecoilValue } from "recoil";
 
 import {
@@ -11,16 +12,25 @@ import {
 } from "@vkontakte/vkui";
 import { Icon24Dismiss } from "@vkontakte/icons";
 
-import { getIsDesktop, getPlatform } from "/src/storage/selectors/main";
+import { getIsDesktop, getPlatform } from "src/storage/selectors/main";
+
+interface ModalConstructorI {
+  id: string;
+  close(): void;
+  title?: string;
+  dynamicContentHeight?: boolean;
+  className?: string;
+  children: ReactNode;
+}
 
 const ModalConstructor = ({
   id,
   close,
   title = "",
+  dynamicContentHeight = false,
   children,
   className = "",
-  dynamicContentHeight = false,
-}) => {
+}: ModalConstructorI) => {
   const isDesktop = useRecoilValue(getIsDesktop);
   const platform = useRecoilValue(getPlatform);
 

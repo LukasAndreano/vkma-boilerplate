@@ -1,11 +1,10 @@
-import { useRouterModal, useRouterPanel } from "@kokateam/router-vkminiapps";
+import { useRouterHooks } from "@kokateam/router-vkminiapps";
 
 import { Button, Title } from "@vkontakte/vkui";
 import toast from "react-hot-toast";
 
 const Home = () => {
-  const { toModal } = useRouterModal();
-  const { toPanel } = useRouterPanel();
+  const { toModal, toPanel } = useRouterHooks();
 
   return (
     <>

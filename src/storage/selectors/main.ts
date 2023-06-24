@@ -1,5 +1,5 @@
 import { selector } from "recoil";
-import _ from "/src/storage/atoms/main";
+import _ from "src/storage/atoms/main";
 
 export const getIsDesktop = selector({
   key: "getIsDesktop",

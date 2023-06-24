@@ -1,14 +1,18 @@
 import { PanelHeader, SplitCol, SplitLayout } from "@vkontakte/vkui";
 import { Epic, View, useRouterPopout } from "@kokateam/router-vkminiapps";
 
-import { PageConstructor } from "/src/components/__global";
+import { PageConstructor } from "src/components/__global";
 import { DesktopNavigation, MobileNavigation } from "./components/__navigation";
 
 import Home from "./components/home/base";
 import Profile from "./components/profile/base";
 import MainStack from "./components/__modals/MainStack";
 
-const Navigation = ({ isDesktop }) => {
+interface NavigationI {
+  isDesktop: boolean;
+}
+
+const Navigation = ({ isDesktop }: NavigationI) => {
   const { popout } = useRouterPopout();
 
   return (

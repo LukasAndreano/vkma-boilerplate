@@ -1,7 +1,7 @@
 import { useRouterView } from "@kokateam/router-vkminiapps";
 
 import { Tabbar, TabbarItem } from "@vkontakte/vkui";
-import navigationItems from "/src/components/__navigation/items";
+import navigationItems from "./items";
 
 const MobileNavigation = () => {
   const { view, toView } = useRouterView();

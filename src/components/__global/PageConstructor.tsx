@@ -1,18 +1,27 @@
-import { Suspense } from "react";
+import { ReactNode, Suspense } from "react";
 import { useRecoilValue } from "recoil";
 import { useRouterBack } from "@kokateam/router-vkminiapps";
 
 import { Group, Panel, PanelHeader, PanelHeaderBack } from "@vkontakte/vkui";
-import { getIsDesktop } from "/src/storage/selectors/main";
+import { getIsDesktop } from "src/storage/selectors/main";
+
+interface PageI {
+  id: string;
+  centered?: boolean;
+  isBack?: boolean;
+  name?: string;
+  className?: string;
+  children: ReactNode;
+}
 
 const Page = ({
-  children,
   id,
-  className = "",
   centered = false,
   isBack = false,
   name = "",
-}) => {
+  className = "",
+  children,
+}: PageI) => {
   const isDesktop = useRecoilValue(getIsDesktop);
   const toBack = useRouterBack();
 

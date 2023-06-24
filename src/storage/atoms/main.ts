@@ -1,6 +1,11 @@
 import { atom } from "recoil";
 
-const _ = atom({
+interface mainI {
+  isDesktop: boolean;
+  platform: string;
+}
+
+const _ = atom<mainI>({
   key: "mainStorage",
   default: {
     isDesktop: false,
