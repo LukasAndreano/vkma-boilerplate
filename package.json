@@ -14,7 +14,7 @@
     "vk-hosting": "vk-miniapps-deploy"
   },
   "dependencies": {
-    "@kokateam/router-vkminiapps": "^0.0.2",
+    "@kokateam/router-vkminiapps": "^0.2.0",
     "@vkontakte/icons": "^2.31.0",
     "@vkontakte/vk-bridge": "^2.7.2",
     "@vkontakte/vkui": "4.41.0",
