@@ -1,9 +1,7 @@
 import { PanelHeader, SplitCol, SplitLayout } from "@vkontakte/vkui";
 import { Epic, View, useRouterPopout } from "@kokateam/router-vkminiapps";
-
 import { PageConstructor } from "/src/components/__global";
 import { DesktopNavigation, MobileNavigation } from "./components/__navigation";
-
 import Home from "./components/home/base";
 import Profile from "./components/profile/base";
 import MainStack from "./components/__modals/MainStack";

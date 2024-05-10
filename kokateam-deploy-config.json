@@ -1,7 +1,6 @@
 {
   "static_path": "dist",
   "app_id": "",
-  "deploy_mode": "static",
   "use_random_prefix": false,
   "purge_access_token": false
 }

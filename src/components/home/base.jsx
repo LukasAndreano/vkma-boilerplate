@@ -4,8 +4,8 @@ import { Button, Title } from "@vkontakte/vkui";
 import toast from "react-hot-toast";
 
 const Home = () => {
-  const { toModal } = useRouterModal();
-  const { toPanel } = useRouterPanel();
+  const [, toModal] = useRouterModal();
+  const [, toPanel] = useRouterPanel();
 
   return (
     <>
