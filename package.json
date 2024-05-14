@@ -32,7 +32,7 @@
     "eruda": "^3.0.0",
     "eruda-code": "^2.1.0",
     "eruda-dom": "^2.0.0",
-    "kokateam-deploy": "^1.0.27",
+    "kokateam-deploy": "^1.0.30",
     "prettier": "^2.8.8",
     "sass": "^1.62.1",
     "vite": "^4.3.3",
