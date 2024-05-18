@@ -1,5 +1,4 @@
 import { useRouterView } from "@kokateam/router-vkminiapps";
-
 import { Panel, PanelHeader, SimpleCell, SplitCol } from "@vkontakte/vkui";
 import navigationItems from "/src/components/__navigation/items";
 
