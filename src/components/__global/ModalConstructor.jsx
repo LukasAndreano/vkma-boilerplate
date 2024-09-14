@@ -1,9 +1,7 @@
 import { useRecoilValue } from "recoil";
 
 import {
-  ANDROID,
   Group,
-  IOS,
   ModalPage,
   ModalPageHeader,
   PanelHeaderButton,
@@ -34,7 +32,7 @@ const ModalConstructor = ({
         <ModalPageHeader
           after={
             !isDesktop &&
-            platform === IOS && (
+            platform === "ios" && (
               <PanelHeaderButton
                 aria-label={"Закрытие модального окна"}
                 onClick={close}
@@ -45,14 +43,14 @@ const ModalConstructor = ({
           }
           before={
             !isDesktop &&
-            platform === ANDROID && <PanelHeaderClose onClick={close} />
+            platform === "android" && <PanelHeaderClose onClick={close} />
           }
         >
           {title}
         </ModalPageHeader>
       }
     >
-      <Group className={"panelPadding"}>{children}</Group>
+      <Group className={"p16"}>{children}</Group>
     </ModalPage>
   );
 };

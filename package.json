@@ -16,7 +16,7 @@
     "@kokateam/router-vkminiapps": "^0.2.6",
     "@vkontakte/icons": "^2.139.0",
     "@vkontakte/vk-bridge": "^2.15.0",
-    "@vkontakte/vkui": "4.41.0",
+    "@vkontakte/vkui": "^6.7.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hot-toast": "^2.4.1",

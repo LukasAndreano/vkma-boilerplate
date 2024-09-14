@@ -13,8 +13,8 @@ export default function SnackbarProvider({ children }) {
         toastOptions={{
           className: "toast",
         }}
-        gutter={isDesktop ? 8 : -20}
-        position={isDesktop ? "bottom-left" : "top-center"}
+        gutter={8}
+        position={isDesktop ? "bottom-left" : "bottom-center"}
         reverseOrder={false}
       />
     </>

@@ -1,10 +1,5 @@
 @import "@vkontakte/vkui/dist/vkui.css", "variables.scss";
 
-body,
-.Header {
-  user-select: none;
-}
-
 body[scheme="bright_dark"],
 [scheme="bright_dark"],
 .vkuibright_dark,
@@ -16,6 +11,10 @@ body[scheme="vkcom_dark"],
     background: #232324;
     color: #fff;
   }
+}
+
+.vkuiSplitLayout {
+  height: auto;
 }
 
 .vkuiTabbarItem {
@@ -34,7 +33,11 @@ body[scheme="vkcom_dark"],
 }
 
 .navigation__item-selected {
-  background-color: var(--vkui--color_background--hover);
+  background-color: var(--vkui--color_field_background);
+}
+
+.vkuiFormItem--withPadding {
+  padding: 10px 0 0;
 }
 
 .panelPadding {
@@ -45,4 +48,10 @@ body[scheme="vkcom_dark"],
   .toast {
     margin-top: 30px;
   }
+}
+
+.header {
+  margin-left: var(--vkui--size_split_col_padding_horizontal--regular);
+
+  background: var(--vkui--color_background_content);
 }

@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import {
-  AppearanceProvider,
   AppRoot,
   ConfigProvider,
-  usePlatform,
-  withAdaptivity,
+  useAdaptivityWithJSMediaQueries,
+  usePlatform
 } from "@vkontakte/vkui";
 
 import Navigation from "/src/Navigation";
@@ -13,55 +12,47 @@ import bridge from "@vkontakte/vk-bridge";
 import main from "/src/storage/atoms/main";
 import SnackbarProvider from "./components/__global/SnackbarProvider";
 
-const App = withAdaptivity(
-  ({ viewWidth }) => {
-    const [theme, setTheme] = useState("light");
-    const [mainCoil, updateMainCoil] = useRecoilState(main);
+bridge.send("VKWebAppInit").then(() => console.log("VKWebAppInit"));
 
-    const platform = usePlatform();
+const App = () => {
+  const [theme, setTheme] = useState("light");
+  const [mainCoil, updateMainCoil] = useRecoilState(main);
 
-    const isDesktop =
-      viewWidth > 3 ||
-      new URLSearchParams(window.location.search).get("vk_platform") ===
-        "desktop_web";
+  const platform = usePlatform();
+  const { viewWidth } = useAdaptivityWithJSMediaQueries();
 
-    useEffect(() => {
-      bridge.subscribe(({ detail: { type, data } }) => {
-        if (type === "VKWebAppUpdateConfig")
-          setTheme(data?.scheme.includes("light") ? "light" : "dark");
-      });
-    }, []);
+  const isDesktop = viewWidth >= 3 || platform === "vkcom";
 
-    useEffect(() => {
-      bridge.send("VKWebAppInit").then(() => console.log("VKWebAppInit"));
+  useEffect(() => {
+    bridge.subscribe(({ detail: { type, data } }) => {
+      if (type === "VKWebAppUpdateConfig" && data?.appearance)
+        setTheme(data.appearance);
+    });
+  }, []);
 
-      updateMainCoil({
-        ...mainCoil,
-        isDesktop,
-        platform,
-      });
-    }, []);
+  useEffect(() => {
+    updateMainCoil({
+      ...mainCoil,
+      isDesktop,
+      platform
+    });
+  }, [isDesktop, platform]);
 
-    return (
-      <ConfigProvider
-        locale={"ru"}
-        isWebView={false}
-        appearance={theme}
-        platform={isDesktop ? "android" : platform}
-      >
-        <AppearanceProvider appearance={theme}>
-          <AppRoot mode="full" className={isDesktop ? "desktop" : "mobile"}>
-            <SnackbarProvider>
-              <Navigation isDesktop={isDesktop} />
-            </SnackbarProvider>
-          </AppRoot>
-        </AppearanceProvider>
-      </ConfigProvider>
-    );
-  },
-  {
-    viewWidth: true,
-  },
-);
+  return (
+    <ConfigProvider
+      locale={"ru"}
+      isWebView={true}
+      appearance={theme}
+      platform={isDesktop ? "android" : platform}
+      hasCustomPanelHeaderAfter
+    >
+      <AppRoot mode="full" userSelectMode={"disabled"}>
+        <SnackbarProvider>
+          <Navigation isDesktop={isDesktop} />
+        </SnackbarProvider>
+      </AppRoot>
+    </ConfigProvider>
+  );
+};
 
 export default App;

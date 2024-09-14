@@ -11,20 +11,18 @@ const Home = () => {
       <Title weight={"3"} className={"mb10 centered"}>
         Привет, это boilerplate!
       </Title>
-      <Button stretched onClick={() => toModal("hello")}>
+      <Button stretched onClick={() => toModal("helloModal")} size={"l"}>
         Открыть модалку!
       </Button>
       <Button
         stretched
         onClick={() => toast.success("Да, это тост")}
+        size={"l"}
         className={"mt5"}
       >
         Toast!
       </Button>
-      <Button stretched onClick={() => toModal("fullModal")} className={"mt5"}>
-        Открыть модалку полную!
-      </Button>
-      <Button className={"mt5"} stretched onClick={() => toPanel("home2")}>
+      <Button className={"mt5"} stretched onClick={() => toPanel("home2")} size={"l"}>
         Открыть панель!
       </Button>
     </>

@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import { useRecoilValue } from "recoil";
 import { useRouterBack } from "@kokateam/router-vkminiapps";
-
 import { Group, Panel, PanelHeader, PanelHeaderBack } from "@vkontakte/vkui";
 import { getIsDesktop } from "/src/storage/selectors/main";
 
@@ -26,7 +25,7 @@ const Page = ({
         before={
           isBack ? <PanelHeaderBack onClick={() => toBack(-1)} /> : undefined
         }
-        separator={isDesktop}
+        delimiter={isDesktop ? "none" : "separator"}
       >
         {name}
       </PanelHeader>

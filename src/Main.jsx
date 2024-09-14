@@ -1,8 +1,8 @@
 import "/src/assets/css/global.scss";
 
 import { createRoot } from "react-dom/client";
-import { AdaptivityProvider } from "@vkontakte/vkui";
 import { RouterRoot } from "@kokateam/router-vkminiapps";
+import { AdaptivityProvider } from "@vkontakte/vkui";
 
 import App from "/src/App";
 

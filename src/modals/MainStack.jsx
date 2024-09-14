@@ -1,10 +1,10 @@
 import { ModalRoot, useRouterModal } from "@kokateam/router-vkminiapps";
-import { Button } from "@vkontakte/vkui";
-import { Icon56Fire } from "@vkontakte/icons";
+import { Icon56CheckCircleOutline } from "@vkontakte/icons";
 import Hello from "./Hello";
 import ModalCardConstructor from "../components/__global/ModalCardConstructor";
 import ModalConstructor from "../components/__global/ModalConstructor";
 import React from "react";
+import FullModal from "./FullModal";
 
 const MainStack = () => {
   const [, toModal] = useRouterModal();
@@ -13,39 +13,20 @@ const MainStack = () => {
     <ModalRoot>
       <ModalCardConstructor
         close={() => toModal(-1)}
-        title={"Привет мир!"}
-        id={"hello"}
-        icon={<Icon56Fire />}
+        title={"Вау, это работает!"}
+        id={"helloModal"}
+        icon={<Icon56CheckCircleOutline />}
       >
         <Hello />
       </ModalCardConstructor>
 
       <ModalConstructor
         id={"fullModal"}
-        title={"Фулл модал"}
+        title={"А это уже интересно!"}
+        settlingHeight={100}
         close={() => toModal(-1)}
       >
-        <Button stretched onClick={() => toModal("fullModal2")}>
-          Открыть модалку!
-        </Button>
-      </ModalConstructor>
-
-      <ModalConstructor
-        id={"fullModal2"}
-        title={"Фулл модал #2"}
-        close={() => toModal(-1)}
-      >
-        <Button stretched onClick={() => toModal("fullModal3")}>
-          Открыть модалку!
-        </Button>
-      </ModalConstructor>
-
-      <ModalConstructor
-        id={"fullModal3"}
-        title={"Фулл модал #3"}
-        close={() => toModal(-1)}
-      >
-        Body
+        <FullModal />
       </ModalConstructor>
     </ModalRoot>
   );
