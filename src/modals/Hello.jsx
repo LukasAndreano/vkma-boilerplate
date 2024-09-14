@@ -6,11 +6,17 @@ const Hello = () => {
 
   return (
     <>
-      <Text className={"centered mt5 mb5"}>Это базовая модалка в виде карточки. Полезно, если нужно отобразить, например, какое-то описание.</Text>
+      <Text className={"centered mt5 mb5"}>
+        Это базовая модалка в виде карточки. Полезно, если нужно отобразить,
+        например, какое-то описание.
+      </Text>
 
       <Button
-        size={'l'}
-        className={"mt10"} stretched onClick={() => toModal("fullModal")}>
+        size={"l"}
+        className={"mt10"}
+        stretched
+        onClick={() => toModal("fullModal")}
+      >
         К следующей модалке
       </Button>
     </>

@@ -4,7 +4,7 @@ import {
   AppRoot,
   ConfigProvider,
   useAdaptivityWithJSMediaQueries,
-  usePlatform
+  usePlatform,
 } from "@vkontakte/vkui";
 
 import Navigation from "/src/Navigation";
@@ -34,7 +34,7 @@ const App = () => {
     updateMainCoil({
       ...mainCoil,
       isDesktop,
-      platform
+      platform,
     });
   }, [isDesktop, platform]);
 

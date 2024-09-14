@@ -10,7 +10,8 @@
     "prettier": "npx prettier --write .",
     "tunnel": "vk-tunnel --insecure=1 --http-protocol=http --ws-protocol=wss --host=localhost --port=3000",
     "deploy": "yarn build && kokateam-deploy",
-    "vk-hosting": "vk-miniapps-deploy"
+    "vk-hosting": "vk-miniapps-deploy",
+    "deploy:gh": "yarn build && gh-pages -d dist"
   },
   "dependencies": {
     "@kokateam/router-vkminiapps": "^0.2.6",
@@ -31,6 +32,7 @@
     "eruda": "^3.3.0",
     "eruda-code": "^2.2.0",
     "eruda-dom": "^2.0.0",
+    "gh-pages": "^6.1.1",
     "kokateam-deploy": "^1.0.36",
     "prettier": "^3.3.3",
     "sass": "^1.78.0",

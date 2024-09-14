@@ -4,7 +4,7 @@ import {
   Panel,
   PanelHeader,
   SimpleCell,
-  SplitCol
+  SplitCol,
 } from "@vkontakte/vkui";
 import navigationItems from "/src/components/__navigation/items";
 
@@ -24,8 +24,7 @@ const DesktopNavigation = () => {
                 view === el.id ? "navigation__item-selected" : ""
               }`}
               onClick={() => {
-                if (view !== el.id)
-                  toView(el.id);
+                if (view !== el.id) toView(el.id);
               }}
               hasActive={view !== el.id}
               hasHover={view !== el.id}

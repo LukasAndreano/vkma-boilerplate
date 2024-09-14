@@ -22,7 +22,12 @@ const Home = () => {
       >
         Toast!
       </Button>
-      <Button className={"mt5"} stretched onClick={() => toPanel("home2")} size={"l"}>
+      <Button
+        className={"mt5"}
+        stretched
+        onClick={() => toPanel("home2")}
+        size={"l"}
+      >
         Открыть панель!
       </Button>
     </>
