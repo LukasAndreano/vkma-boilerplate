@@ -1,6 +1,19 @@
 import { Icon24HomeOutline, Icon24UserCircleOutline } from "@vkontakte/icons";
 
-export default [
+/**
+ * Элемент навигации
+ * @typedef {Object} NavigationItem
+ * @property {string} id - Уникальный идентификатор раздела.
+ * @property {string} title - Название раздела.
+ * @property {string} description - Описание раздела.
+ * @property {React.ReactNode} icon - Иконка для отображения в разделе.
+ */
+
+/**
+ * Массив навигации
+ * @type {NavigationItem[]}
+ */
+const navigationItems = [
   {
     id: "home",
     title: "Главная",
@@ -14,3 +27,5 @@ export default [
     icon: <Icon24UserCircleOutline />,
   },
 ];
+
+export default navigationItems;

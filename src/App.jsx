@@ -46,10 +46,10 @@ const App = withAdaptivity(
       <ConfigProvider
         locale={"ru"}
         isWebView={false}
-        appearance={theme || "light"}
+        appearance={theme}
         platform={isDesktop ? "android" : platform}
       >
-        <AppearanceProvider appearance={theme || "light"}>
+        <AppearanceProvider appearance={theme}>
           <AppRoot mode="full" className={isDesktop ? "desktop" : "mobile"}>
             <SnackbarProvider>
               <Navigation isDesktop={isDesktop} />
@@ -61,7 +61,7 @@ const App = withAdaptivity(
   },
   {
     viewWidth: true,
-  }
+  },
 );
 
 export default App;

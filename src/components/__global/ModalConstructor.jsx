@@ -52,9 +52,7 @@ const ModalConstructor = ({
         </ModalPageHeader>
       }
     >
-      <Group>
-        <div className={"panelPadding"}>{children}</div>
-      </Group>
+      <Group className={"panelPadding"}>{children}</Group>
     </ModalPage>
   );
 };

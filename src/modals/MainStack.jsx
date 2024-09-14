@@ -2,8 +2,9 @@ import { ModalRoot, useRouterModal } from "@kokateam/router-vkminiapps";
 import { Button } from "@vkontakte/vkui";
 import { Icon56Fire } from "@vkontakte/icons";
 import Hello from "./Hello";
-import ModalCardConstructor from "../__global/ModalCardConstructor";
-import ModalConstructor from "../__global/ModalConstructor";
+import ModalCardConstructor from "../components/__global/ModalCardConstructor";
+import ModalConstructor from "../components/__global/ModalConstructor";
+import React from "react";
 
 const MainStack = () => {
   const [, toModal] = useRouterModal();

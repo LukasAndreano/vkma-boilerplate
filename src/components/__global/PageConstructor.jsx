@@ -20,7 +20,7 @@ const Page = ({
     <Panel
       id={id}
       centered={centered}
-      className={`${!isDesktop ? "DivFix" : undefined} ${className}`}
+      className={`${!isDesktop ? "DivFix" : undefined} ${className || ""}`}
     >
       <PanelHeader
         before={

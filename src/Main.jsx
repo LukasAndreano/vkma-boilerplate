@@ -1,17 +1,20 @@
-import { render } from "react-dom";
-import { AdaptivityProvider } from "@vkontakte/vkui";
-import { RouterRoot } from "@kokateam/router-vkminiapps";
-import App from "/src/App";
 import "/src/assets/css/global.scss";
 
+import { createRoot } from "react-dom/client";
+import { AdaptivityProvider } from "@vkontakte/vkui";
+import { RouterRoot } from "@kokateam/router-vkminiapps";
+
+import App from "/src/App";
+
 const app = async () => {
-  render(
+  const root = createRoot(document.getElementById("root"));
+
+  root.render(
     <RouterRoot>
       <AdaptivityProvider>
         <App />
       </AdaptivityProvider>
     </RouterRoot>,
-    document.getElementById("root")
   );
 };
 
