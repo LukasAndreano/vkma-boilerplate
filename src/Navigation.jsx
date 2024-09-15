@@ -8,33 +8,33 @@ import MobileNavigation from "./components/__navigation/Mobile";
 import Profile from "./panels/profile/profile";
 
 const Navigation = ({ isDesktop }) => {
-  const [popout] = useRouterPopout();
+	const [popout] = useRouterPopout();
 
-  return (
-    <SplitLayout header={<PanelHeader />} modal={<MainStack />} popout={popout}>
-      {isDesktop ? <DesktopNavigation /> : null}
+	return (
+		<SplitLayout header={<PanelHeader />} modal={<MainStack />} popout={popout}>
+			{isDesktop ? <DesktopNavigation /> : null}
 
-      <SplitCol autoSpaced>
-        <Epic tabbar={!isDesktop ? <MobileNavigation /> : null}>
-          <View id="home">
-            <PageConstructor id={"home"} name={"Главная"}>
-              <Home />
-            </PageConstructor>
+			<SplitCol autoSpaced>
+				<Epic tabbar={!isDesktop ? <MobileNavigation /> : null}>
+					<View id="home">
+						<PageConstructor id={"home"} name={"Главная"}>
+							<Home />
+						</PageConstructor>
 
-            <PageConstructor isBack id={"home2"} name={"Главная 2"}>
-              <Home />
-            </PageConstructor>
-          </View>
+						<PageConstructor isBack id={"home2"} name={"Главная 2"}>
+							<Home />
+						</PageConstructor>
+					</View>
 
-          <View id="profile">
-            <PageConstructor id={"profile"} name={"Профиль"}>
-              <Profile />
-            </PageConstructor>
-          </View>
-        </Epic>
-      </SplitCol>
-    </SplitLayout>
-  );
+					<View id="profile">
+						<PageConstructor id={"profile"} name={"Профиль"}>
+							<Profile />
+						</PageConstructor>
+					</View>
+				</Epic>
+			</SplitCol>
+		</SplitLayout>
+	);
 };
 
 export default Navigation;

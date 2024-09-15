@@ -3,35 +3,35 @@ import { Button, Title } from "@vkontakte/vkui";
 import toast from "react-hot-toast";
 
 const Home = () => {
-  const [, toModal] = useRouterModal();
-  const [, toPanel] = useRouterPanel();
+	const [, toModal] = useRouterModal();
+	const [, toPanel] = useRouterPanel();
 
-  return (
-    <>
-      <Title weight={"3"} className={"mb10 centered"}>
-        Привет, это boilerplate!
-      </Title>
-      <Button stretched onClick={() => toModal("helloModal")} size={"l"}>
-        Открыть модалку!
-      </Button>
-      <Button
-        stretched
-        onClick={() => toast.success("Да, это тост")}
-        size={"l"}
-        className={"mt5"}
-      >
-        Toast!
-      </Button>
-      <Button
-        className={"mt5"}
-        stretched
-        onClick={() => toPanel("home2")}
-        size={"l"}
-      >
-        Открыть панель!
-      </Button>
-    </>
-  );
+	return (
+		<>
+			<Title weight={"3"} className={"mb10 centered"}>
+				Привет, это boilerplate!
+			</Title>
+			<Button stretched onClick={() => toModal("helloModal")} size={"l"}>
+				Открыть модалку!
+			</Button>
+			<Button
+				stretched
+				onClick={() => toast.success("Да, это тост")}
+				size={"l"}
+				className={"mt5"}
+			>
+				Toast!
+			</Button>
+			<Button
+				className={"mt5"}
+				stretched
+				onClick={() => toPanel("home2")}
+				size={"l"}
+			>
+				Открыть панель!
+			</Button>
+		</>
+	);
 };
 
 export default Home;

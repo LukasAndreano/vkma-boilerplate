@@ -19,20 +19,20 @@
  *   .catch(error => console.error(error));
  */
 const api = async (endpoint, method = "GET", params) => {
-  const data = await fetch(`${import.meta.env.VITE_BACKEND_URL}/${endpoint}`, {
-    method: method,
-    headers: {
-      authorization: `Bearer ${
-        window.location.href
-          .slice(window.location.href.indexOf("?") + 1)
-          .split("#")[0]
-      }`,
-      "Content-Type": "application/json",
-    },
-    body: params ? JSON.stringify(params) : null,
-  });
+	const data = await fetch(`${import.meta.env.VITE_BACKEND_URL}/${endpoint}`, {
+		method: method,
+		headers: {
+			authorization: `Bearer ${
+				window.location.href
+					.slice(window.location.href.indexOf("?") + 1)
+					.split("#")[0]
+			}`,
+			"Content-Type": "application/json",
+		},
+		body: params ? JSON.stringify(params) : null,
+	});
 
-  return await data.json();
+	return await data.json();
 };
 
 export default api;
