@@ -412,17 +412,24 @@
   dependencies:
     "@swc/helpers" "^0.5.12"
 
-"@vkontakte/icons@^2.115.0", "@vkontakte/icons@^2.139.0":
+"@vkontakte/icons@^2.115.0":
   version "2.139.0"
   resolved "https://registry.yarnpkg.com/@vkontakte/icons/-/icons-2.139.0.tgz#dfeaed4e293da6a8446d9bef4cff6d53668aaa94"
   integrity sha512-ARbqKcPr5bkBS+tIeXV9sVIj5LB6qRJIaUm2wEPEHksUJaUO7XDJzXedHWPM0jDdHf5UnunjU2+eV951TH3Fgw==
   dependencies:
     "@vkontakte/icons-sprite" "2.3.0"
 
-"@vkontakte/vk-bridge@^2.15.0":
-  version "2.15.0"
-  resolved "https://registry.yarnpkg.com/@vkontakte/vk-bridge/-/vk-bridge-2.15.0.tgz#3283f96eb7558000b92dc9fe2c4f200960bc5137"
-  integrity sha512-QtHfXtI1Dpjy0BCBzA4MIjwR7DspX/i2V2rvqq/E7Q3kZHmxzIXIYrJvj7OyE0gOYEr+bWEJViU1nUrcxv72tw==
+"@vkontakte/icons@^2.149.0":
+  version "2.149.0"
+  resolved "https://registry.yarnpkg.com/@vkontakte/icons/-/icons-2.149.0.tgz#10fc561f077131acc07295944ee5e0c930fbf589"
+  integrity sha512-+CrOGgT03cXOUh/4y1Zi4o+xi4wkB7eyeeCg4x44XKF0DLuPc2PV2ugCEzuWr+0LXzBJ3eKSJrC0wwXU1OFqfA==
+  dependencies:
+    "@vkontakte/icons-sprite" "2.3.0"
+
+"@vkontakte/vk-bridge@^2.15.1":
+  version "2.15.1"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vk-bridge/-/vk-bridge-2.15.1.tgz#f80f3aa7bd31677e36ad76de9b17759be833e804"
+  integrity sha512-k/ijPeY2rOnIcjYtFPTVN9tYbPr2JaCcSYNpdcPyX63gKSQRTgALeygkaUIBmKziSk/0L/tlSq0ZQbQ0K3bHkA==
 
 "@vkontakte/vk-miniapps-deploy@^0.1.8":
   version "0.1.8"
@@ -471,10 +478,10 @@
     "@floating-ui/react-dom" "^2.1.0"
     "@swc/helpers" "^0.5.11"
 
-"@vkontakte/vkui@^6.7.0":
-  version "6.7.0"
-  resolved "https://registry.yarnpkg.com/@vkontakte/vkui/-/vkui-6.7.0.tgz#ffe3baebd70fa8623bb07fe4d27a45dfd231f453"
-  integrity sha512-bM6GgZw04yHWeF3fLz2odcnUZXkH7Ws2MpiA6n/Nt9ZDAdcfuGBm0bmKNkyAuDeE8bV06AWSX3NdUYn56SeLuw==
+"@vkontakte/vkui@6.7.2":
+  version "6.7.2"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vkui/-/vkui-6.7.2.tgz#023f23385312fbbe1dc71608c89f5676ac0ed155"
+  integrity sha512-p/aymZUtE1B6PSKoPbavQ3BpsXUKNeO0yqhJNLwXdi2tC7zQN4WCtZjsrnWSKwtSZaL4vTmMZcJXL4WX0CgrfQ==
   dependencies:
     "@swc/helpers" "^0.5.13"
     "@vkontakte/icons" "^2.115.0"
